@@ -6,7 +6,26 @@ P I N K   T R O M B O N E
 Bare-handed procedural speech synthesis
 
 version 1.1, March 2017
+by Neil Thapen
+venuspatrol.nfshost.com
 
+
+Bibliography
+
+Julius O. Smith III, "Physical audio signal processing for virtual musical instruments and audio effects."
+https://ccrma.stanford.edu/~jos/pasp/
+
+Story, Brad H. "A parametric model of the vocal tract area function for vowel and consonant simulation." 
+The Journal of the Acoustical Society of America 117.5 (2005): 3231-3254.
+
+Lu, Hui-Ling, and J. O. Smith. "Glottal source modeling for singing voice synthesis." 
+Proceedings of the 2000 International Computer Music Conference. 2000.
+
+Mullen, Jack. Physical modelling of the vocal tract with the 2D digital waveguide mesh. 
+PhD thesis, University of York, 2006.
+
+
+Copyright 2017 Neil Thapen 
 
 Permission is hereby granted, free of charge, to any person obtaining a 
 copy of this software and associated documentation files (the "Software"), 
@@ -146,20 +165,25 @@ var UI =
     drawAboutText : function()
     {
         var ctx = tractCtx;
-        ctx.globalAlpha = 1.0;
+         //ctx.globalAlpha = 1.0;
         ctx.fillStyle = "#C070C6";
         ctx.strokeStyle = "#C070C6";
         ctx.font="50px Arial";
         ctx.lineWidth = 3;
         ctx.textAlign = "center";
+       //ctx.strokeText("GSoC 2017", 300, 230);
+        //ctx.fillText("GSoC 2017", 300, 230);
+
         ctx.strokeText("P i n k   T r o m b o n e", 300, 230);
         ctx.fillText("P i n k   T r o m b o n e", 300, 230);
-        
+ ctx.font="50px Arial";        
+        ctx.fillText("(GSoC 2017)", 300, 380); 
+       
         ctx.font="28px Arial";
         ctx.fillText("bare-handed  speech synthesis", 300, 330);
 
-        ctx.font="20px Arial";        
-        //ctx.fillText("(tap to start)", 300, 380);   
+        ctx.font="50px Arial";        
+        ctx.fillText("(GSoC 2017)", 300, 380);   
 
         if (isFirefox) 
         {
